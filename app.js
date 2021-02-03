@@ -15,24 +15,28 @@ addTaskBtn.addEventListener("click", () => {
     p.innerText = newTask.value;
     // Append p to "single-item" div
     div.append(p);
+    // Create icon container div
+    const iconDiv = document.createElement("div");
     // Create edit icon
     const editIcon = document.createElement("i");
     editIcon.classList.add("fa");
     editIcon.classList.add("fa-pencil");
-    // Append edit icon to "single-item" div
-    div.append(editIcon);
+    // Append edit icon to icon div
+    iconDiv.append(editIcon);
+    // Append  icon div to "single-item" div
+    div.append(iconDiv)
     // Create marked done icon
     const markedDoneIcon = document.createElement("i");
     markedDoneIcon.classList.add("fa");
     markedDoneIcon.classList.add("fa-check-square");
-    // Append marked done icon to "single-item"div
-    div.append(markedDoneIcon);
+    // Append marked done icon to icon div
+    iconDiv.append(markedDoneIcon);
     // Create trash icon
     const trashIcon = document.createElement("i");
     trashIcon.classList.add("fa");
     trashIcon.classList.add("fa-trash");
-    // Append trash icon to "single-item" div
-    div.append(trashIcon);
+    // Append trash icon to icon div
+    iconDiv.append(trashIcon);
     // Clear input
     newTask.value = "";
 

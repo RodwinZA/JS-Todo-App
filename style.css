@@ -5,34 +5,30 @@
 }
 
 html, body {
+    background: linear-gradient(#2193b0, #6dd5ed);
     color: #1f1e1e;
     font-family: 'Poppins', sans-serif;
     width: 100%;
-    height: 100%;
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: linear-gradient(#2193b0, #6dd5ed);
-    height: auto;
-    width: 50%;
-    padding: 60px 0 20px;
-    margin: 0 auto;
+    padding: 60px 20px 20px;
 }
 
 .wrapper h1 {
-    font-size: 48px;
+    font-size: 40px;
     margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
 }
 
 .new-task {
     font-family: inherit;
     font-size: 20px;
     border-style: none;
-    padding: 10px 15px;
+    padding: 10px 5px;
     margin-bottom: 20px;
+    display: block;
 }
 
 .add-task-btn {
@@ -43,7 +39,9 @@ html, body {
     border-style: none;
     cursor: pointer;
     padding: 10px 15px;
+    margin-bottom: 60px;
 }
+
 .add-task-btn:hover {
     background-color: #000000;
 }
@@ -51,22 +49,28 @@ html, body {
 .todo-items {
     display: flex;
     flex-direction: column;
-    padding: 100px 20px 60px;
-    width: 100%;
 }
 
 .single-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.single-item div {
     display: flex;
 }
 
 .single-item p, .single-item i {
     font-size: 30px;
-    margin-left: 20px;
 }
 
 .single-item p {
-    margin-bottom: 20px;
-    width: 50%;
+    margin-bottom: 10px;
+}
+
+.single-item i {
+    margin-right: 20px;
 }
 
 .single-item p.checked {
@@ -92,12 +96,38 @@ html, body {
 }
 
 .edit-item {
+    display: block;
     background-color: inherit;
     border-style: none;
     border-bottom: 1px solid #1f1e1e;
     font-size: 20px;
     font-family: inherit;
-    margin-left: 20px;
+    margin-bottom: 20px;
     outline: none;
     width: 50%;
+}
+
+@media screen and (min-width: 768px){
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        margin: 0 auto;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    
+    .wrapper h1 {
+        font-size: 48px;
+    }
+            
+    .todo-items {
+        flex-direction: column;
+    }
+    
+    .single-item {
+        display: flex;
+    }
+    
 }
